@@ -1,0 +1,52 @@
+.navbar{
+    height: 8vh;
+    width: 100vw;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar div{
+    color:white;
+}
+
+.ulli ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.ulli ul li{
+    padding: 10px;
+}
+
+/* .body table{
+    width: 100vw;
+    text-align: left;
+    border: 1px solid;
+}
+
+tr{
+    border: 1px black;
+    margin: 5px;
+    height: 40px;
+    background-color: beige;
+} */
+
+.bg-primary-light {
+    background-color: rgba(13, 110, 253, 0.2); /* Lightened primary color with 20% opacity */
+    height: 60px;
+   
+}
+
+.bg-danger-light {
+    background-color: rgb(243, 184, 184); /* Lightened primary color with 20% opacity */
+    height: 60px;
+   
+}
+
+.bg-success-light {
+    background-color:rgb(183, 242, 183); /* Lightened primary cologrer with 20% opacity */
+    height: 60px;
+   
+}

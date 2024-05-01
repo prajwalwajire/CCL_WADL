@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="registrationForm" onsubmit=" return validateForm()">
+            <div class="smallbox">
+                <div class="innerbox">
+                    <label for="name">Name<span style="color: red;"> *</span></label>
+                </div>
+                <input type="text" placeholder="Enter your name" id="name">
+            </div>
+            <div class="smallbox">
+                <div class="innerbox">
+                    <label for="name">User Name<span style="color: red;"> *</span></label>
+                </div>
+                <input type="text" placeholder="Enter User name" id="userName">
+            </div>
+            <div class="smallbox">
+                <div class="innerbox">
+                    <label for="name">Email<span style="color: red;"> *</span></label>
+                </div>
+                <input type="email" placeholder="Enter your eamil" id="email">
+            </div>
+            <div class="smallbox">
+                <div class="innerbox">
+                    <label for="name">District<span style="color: red;"> *</span></label>
+                </div>
+                <select id="district">
+                    <option value="sangli">Sangli</option>
+                    <option value="pune">Pune</option>
+                    <option value="satara">Satara</option>
+                </select>
+            </div>
+            <div class="smallbox">
+                <div class="innerbox">
+                    <label for="name">State<span style="color: red;"> *</span></label>
+                </div>
+                <select id="state">
+                    <option value="UP">UP</option>
+                    <option value="MP">MP</option>
+                    <option value="TM">TM</option>
+                </select>
+            </div>
+            <div class="smallbox">
+                <div class="innerbox">
+                    <label for="date">Date</label>
+                </div>
+                <input type="date" id="date">
+            </div>
+            <div class="smallbox">
+                <div class="innerbox">
+                    <label for="gender">Gender</label>
+                </div>
+                <div>
+                    <label><input type="radio" id="male"> Male</label>
+                    <label> <input type="radio" id="female"> Female</label>
+                </div>
+            </div>
+            <div class="smallbox">
+                <div class="innerbox">
+                    <label for="hobbies">Hobbies</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="swim">
+                    <label>Swmming</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="run">
+                    <label>Running</label>
+                </div>
+            </div>
+            <div class="smallbox">
+                <div class="innerbox">
+                    <label for="password">Password</label>
+                </div>
+                <input type="password" id="password">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

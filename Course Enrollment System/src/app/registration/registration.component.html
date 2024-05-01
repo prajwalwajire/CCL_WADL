@@ -1,0 +1,31 @@
+<div>
+  <h1>Registration Form</h1>
+  <form (ngSubmit)="Register()">
+    <label for="name">Name</label><br />
+    <input
+      type="text"
+      name="name"
+      id="name"
+      [(ngModel)]="formData.name"
+      required
+    /><br />
+    <label for="email">Email</label><br />
+    <input
+      type="email"
+      name="email"
+      id="email"
+      [(ngModel)]="formData.email"
+      required
+    /><br />
+    <label for="password">Password</label><br />
+    <input
+      type="password"
+      name="password "
+      [(ngModel)]="formData.password"
+      id="password"
+      required
+    /><br />
+    <hr />
+    <button type="submit">Register</button>
+  </form>
+</div>

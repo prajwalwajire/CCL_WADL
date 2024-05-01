@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form id="inputform">
+            Input1:<input type="text" name="input1" value="3#3#3" >
+            <br><br>
+            Input2:<input type="text" name="input2" value="3#3#2" >
+            <br><br>
+            <button>Submit</button>
+        </form>
+        <hr>
+        <table border="1px" id="table1"></table>
+        <hr>
+        <table border="1px" id="table2"></table>
+        <hr>
+        <table border="1px" id="table3"></table>
+        
+        
+    </center>
+
+    
+</body>
+<script>
+    // const inputdata=document.getElementById("inputform");
+    const form = document.forms.inputform
+
+    form.addEventListener("submit",formsubmit);
+
+    function createTable(input){
+        let table=[];
+        for(let row=0;row<input[0];row++){
+            table.push([]);
+        }
+        let val=input[2];
+        for(let j=0;j<input[1];j++){
+            table[0][j]=val++;
+            for(let i=0;i<input[0];i++){
+                table[i][j]=(i+1)*table[0][j];
+            }
+        }
+        return table;
+    }
+
+    function multiply(table1,table2){
+        let table=[];
+        for(let i=0;i<table1.length;i++){
+            let row=[];
+            for(let j=0;j<table1[0].length;j++){
+                if(table1[i][j]!=table2[i][j]){
+                    row.push(table1[i][j]*table2[i][j]);
+                }
+                else{
+                    row.push(table1[i][j]);
+                }
+            }
+            table.push(row);
+        }
+        return table;
+    }
+
+    function displaytable(table,id){
+        const tableid=document.getElementById(id);
+        let html="";
+        for(let i=0;i<table.length;i++){
+            html+="<tr>"
+                for(let j=0;j<table[0].length;j++){
+                    html+="<td>"
+                    html+=table[i][j]
+                    html+="</td>"
+                }
+            html+="</tr>"
+        }
+        console.log(html);
+        tableid.innerHTML=html;
+    }
+
+    function formsubmit(event){
+        event.preventDefault();
+
+        let ip1=form.input1.value;
+        let ip2=form.input2.value;
+
+        ip1=ip1.split("#")
+        ip2=ip2.split("#")
+        console.log(ip1)
+        console.log(ip2)
+
+        let t1=createTable(ip1);
+        let t2=createTable(ip2);
+        let t3=multiply(t1,t2);
+
+        displaytable(t1,"table1")
+        displaytable(t2,"table2")
+        displaytable(t3,"table3")
+    }
+</script>
+</html> 
+
+
+
+
+ 

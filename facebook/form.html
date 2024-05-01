@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+        table{
+            height: 800px;
+            width: 550px;
+        }
+        th{
+            text-align: center;
+            font-size: 1.5rem;
+            background-color: #ffff0088;
+            color: red;
+        }
+        td{
+            /* padding: 100px; */
+            font-size: larger;
+            background-color: #4db8e9;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        
+        button{
+            padding: 3px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <center> -->
+             <!-- </center> -->
+             <form id="userDataForm">
+                <table border="1px">
+                    <thead>
+                        <tr>
+                            <th colspan="2">User Data</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Enter the Name</td>
+                        <td><input type="text" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Enter the Email</td>
+                        <td><input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required></td>
+                    </tr>
+                    
+            
+                    <tr>
+                        <td>Enter Password</td>
+                        <td><input type="password" name="password" id="password" required></td>
+                    </tr>
+            
+                    <tr>
+                        <td>Confirm Password</td>
+                        <td><input type="password" name="confirmPassword" id="confirmPassword" required></td>
+                    </tr>
+            
+                    <tr>
+                        <td>Enter Address</td>
+                        <td><textarea rows="4" cols="25"name="address" required></textarea></td>
+                    </tr>
+            
+                    <tr>
+                        <td>Select Games</td>
+                        <td>
+                            <input type="checkbox" name="game" value="Football">Football
+                            <input type="checkbox" name="game" value="Hockey">Hockey
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            <input type="radio" name="gender" value="Male" required>Male
+                            <input type="radio" name="gender" value="Female" required>Female
+                        </td>
+                    </tr>
+            
+                    
+                    <tr>
+                        <td colspan="2" style="text-align: center">
+                            <input type="file" name="file">
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td colspan="2" style="text-align: center">
+                            <button type="button">Click Me</button>
+                            <button type="reset">Reset</button>
+                            <button type="submit">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>            
+    </div>
+</body>
+<script>
+    document.getElementById("userDataForm").addEventListener("submit",validateForm)
+    function validateForm() {
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    if(password!==confirmPassword){
+        alert("Incorrect password again recheck the password!")
+        return false;
+    }
+    if (password.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return false;
+    }
+    return true;
+}
+
+
+</script>
+</html>

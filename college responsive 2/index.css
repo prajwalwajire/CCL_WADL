@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.header{
+    width: 80vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:1px solid;
+}   
+
+.header button{
+    width: 70vw;
+    height: 5vh;
+    color:white;
+    background: rgb(22, 22, 227);
+}
+
+.header button a{
+    color: white;
+    text-decoration: none;
+}
+
+.body{
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center; */
+    border:1px solid;
+    margin: 20px;
+}   
+
+.box1{
+    width: 30%;
+    margin: 2px;
+}
+
+.box1 img{
+    width: 70%;
+    height: 57%;
+    margin: 2px;
+}
+
